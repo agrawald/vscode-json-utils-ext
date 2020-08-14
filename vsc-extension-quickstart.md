@@ -1,6 +1,6 @@
-# JSON Schema Utilities Extention
+# JSON Schema Utilities Extension
 
-This extention will provide the following 3 menu `Ctrl + Shift + P` options
+This extension will provide the following 3 menu `Ctrl + Shift + P` options
 
 - JSON Utils: Validate JSON Schema
 - JSON Utils: Generate Mock JSON
