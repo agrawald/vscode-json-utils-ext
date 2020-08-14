@@ -4,6 +4,7 @@ import * as vscode from "vscode";
 import generateJson from "./generate-json";
 import validateSchema from "./validate-schema";
 import validateJsonAgainstSchema from "./validate-json";
+import generateJsonSchema from "./generate-schema";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -29,7 +30,12 @@ export function activate(context: vscode.ExtensionContext) {
     "jsonschemautils.validateJson",
     validateJsonAgainstSchema
   );
-  context.subscriptions.push(schemaValidator, jsonGenerator, jsonValidator);
+  let jsonSchemaGenerator = vscode.commands.registerCommand(
+    "jsonschemautils.generateJsonSchema",
+    generateJsonSchema
+  );
+
+  context.subscriptions.push(schemaValidator, jsonGenerator, jsonValidator, jsonSchemaGenerator);
 }
 
 // this method is called when your extension is deactivated

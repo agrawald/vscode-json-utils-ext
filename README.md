@@ -1,9 +1,10 @@
-# JSON Schema Utilities Extention
+# JSON Schema Utilities Extension
 
-This extention will provide the following 3 menu `Ctrl + Shift + P` options
+This extension will provide the following 3 menu `Ctrl + Shift + P` options
 
 - JSON Utils: Validate JSON Schema
 - JSON Utils: Generate Mock JSON
+- JSON Utils: Generate JSON Schema
 - JSON Utils: Validate JSON against JSON schema
 
 ## JSON Utils: Validate JSON Schema
@@ -19,6 +20,11 @@ In case of an invalid schema, the errors will be logged into a file, `validateSc
 
 This option when selected will create a mock JSON from JSON schema (active in the text editor)
 The mock json file, `generatedJson.mock.json`, will be saved at the same location as the JSON schema.
+
+## JSON Utils: Generate JSON Schema
+
+This option when selected will create JSON schema (active in the text editor)
+The mock json file, `generatedSchema.json`, will be saved at the same location as the JSON file.
 
 ## JSON Utils: Validate JSON against JSON Schema
 
