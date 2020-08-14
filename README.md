@@ -1,65 +1,27 @@
-# vscode-json-utils.ext README
+# JSON Schema Utilities Extention
 
-This is the README for your extension "jsonschemautils". After writing up a brief description, we recommend including the following sections.
+This extention will provide the following 3 menu `Ctrl + Shift + P` options
 
-## Features
+- JSON Utils: Validate JSON Schema
+- JSON Utils: Generate Mock JSON
+- JSON Utils: Validate JSON against JSON schema
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## JSON Utils: Validate JSON Schema
 
-For example if there is an image subfolder under your extension project workspace:
+This option when selected will try to valide the JSON schema (Active in the text editor) against following json-schema definations
 
-\!\[feature X\]\(images/feature-x.png\)
+> <http://json-schema.org/draft-04/schema>#
+> <http://json-schema.org/draft-06/schema>#
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+In case of an invalid schema, the errors will be logged into a file, `validateSchema.errors.json` and will be saved in to the same location as the JSON schema.
 
-## Requirements
+## JSON Utils: Generate Mock JSON
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+This option when selected will create a mock JSON from JSON schema (active in the text editor)
+The mock json file, `generatedJson.mock.json`, will be saved at the same location as the JSON schema.
 
-## Extension Settings
+## JSON Utils: Validate JSON against JSON Schema
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+For this action to work, the JSON schema file and JSON file should be open in the split text editor, and active. When this option is selected the JSON (right text editor) will be validated against the JSON schema (left text editor).
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+If errors, an error file, `validateJson.errors.json` will be saved in the same location as JSON file.

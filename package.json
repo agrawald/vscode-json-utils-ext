@@ -1,5 +1,6 @@
 {
   "name": "jsonschemautils",
+  "publisher": "dagra",
   "displayName": "JSON Utils",
   "description": "Utilities for validating and mocking JSON schema.",
   "version": "0.0.1",
