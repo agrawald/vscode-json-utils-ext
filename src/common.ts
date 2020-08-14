@@ -6,7 +6,7 @@ export async function writeFile(fileName: string, data: string): Promise<vscode.
     const writeData = Buffer.from(data, "utf8");
     const folderUri = vscode.workspace.workspaceFolders[0].uri;
     const fileUri = folderUri.with({
-      path: posix.join(folderUri.path, "validateSchema-errors.json"),
+      path: posix.join(folderUri.path, fileName),
     });
     await vscode.workspace.fs.writeFile(fileUri, writeData);
     return fileUri;
